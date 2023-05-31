@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+}
+:root {
+    --color-bkgd: #1f1f1f;
+    --color-card-bkgd: #28292a;
+    --color-card-bkgd__hover: rgb(0,74,119);
+    --color-card-txt: #e3e3e3;
+    --font-card: 'Open Sans', sans-serif;
+}
+body {
+    background-color: var(--color-bkgd);
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background-color: var(--color-card-bkgd);
+    color: var(--color-card-txt);
+    font-family: var(--font-card);
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    box-shadow:0 12.5px 10px rgba(0, 0, 0, 0.035);
+    width: 30vw;
+    min-width: 220px;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+.card:hover {
+    background-color: var(--color-card-bkgd__hover);
+    box-shadow: 17px 17px 10px -17px rgba(3, 42, 66, 0.2);
+    border-radius: 1.5rem;
+}
+.card__img {
+    width: 30vw;
+    min-width: 220px;
+    max-height: 300px;
+    transition: transform 0.5s ease;
+}
+.card__img:hover {
+    transform: scale(1.05);
+}
+.card__figcaption {
+    height: 3.5rem;
+    margin: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+    overflow: hidden;
+}
+.card__figcaption_titulo {
+    font-weight: 400;
+    padding-bottom: 0.1rem;
+    font-size: 1rem;
+    opacity: .95;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card__figcaption_descripcion {
+    font-weight: 200;
+    font-size: 0.8rem; 
+    opacity: .75;
+    text-overflow: ellipsis;
+}
